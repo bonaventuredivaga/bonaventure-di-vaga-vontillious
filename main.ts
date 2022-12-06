@@ -1,13 +1,35 @@
-input.onButtonPressed(Button.A, function () {
-	
+input.onGesture(Gesture.Shake, function () {
+    number = randint(0, 2)
+    basic.showNumber(number)
+    if (number == 0) {
+        basic.showLeds(`
+            . . . . .
+            . # # . .
+            # # # # .
+            # # # # .
+            . # # . .
+            `)
+    } else if (number == 1) {
+        basic.showLeds(`
+            # # # # #
+            # # # # .
+            # # # # #
+            . # # # #
+            # # # # #
+            `)
+    } else if (number == 2) {
+        basic.showLeds(`
+            . . . # .
+            . . # . #
+            . # . # .
+            # # # . .
+            # # . . .
+            `)
+    }
 })
-input.onButtonPressed(Button.AB, function () {
-	
-})
-input.onButtonPressed(Button.B, function () {
-	
-})
-let a = 0
+let number = 0
+number = 0
+basic.showNumber(number)
 basic.forever(function () {
 	
 })
